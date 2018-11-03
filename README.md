@@ -1,8 +1,8 @@
-#BACK-END Scrable:
+# BACK-END Scrable:
 
 
 
-###PL
+### PL
 Napisz skrpyt który policzy wynik z gry Scrabble na podstawie LETTER_SCORES.
 Powinny być trzy tryby (dostępne przez linie komend):
 * zwraca najwyższy wynik z pliku dictionary.txt
@@ -18,7 +18,7 @@ Wymagania:
 - OOP
 - dodatkowepunkty za testy
 ##
-###ENG
+### ENG
 Write a script that will tell score from scrabble game based on LETTER_SCORES.
 There should be three options (available from command line):
 * return highest score from dictionary.txt file
