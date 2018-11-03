@@ -14,7 +14,7 @@ class ScrabbleRules:
 
     def __init__(self, scrabbles_scores, dict_file):
         self.dictionary = open(dict_file, "r")
-        self.dictionary = [word[:-1] for word in self.dictionary]                    # remove \n character from words
+        self.dictionary = [word[:-1] for word in self.dictionary]   # remove \n character from words
         self.letter_scores = {letter: score for score, letters in scrabbles_scores   # create dict with mapping
                               for letter in letters.split()}                         # letter: score
 
@@ -42,7 +42,7 @@ class Referee:
         words_scores = []
 
         for word in dictionary:
-            word = word[:-1]
+            word = word
             word_score = self.word_score(word)
             words_scores.append((word, word_score))
 
