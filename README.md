@@ -14,7 +14,7 @@ Powinny być trzy tryby (dostępne przez linie komend):
 
 Wymagania:
 - Python3.7
-- można uśywać modułówktóre są dostępne w standardowej bibliotece
+- można uśywać modułów, które są dostępne w standardowej bibliotece
 - OOP
 - dodatkowepunkty za testy
 ##
