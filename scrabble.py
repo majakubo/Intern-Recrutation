@@ -42,7 +42,6 @@ class Referee:
         words_scores = []
 
         for word in dictionary:
-            word = word
             word_score = self.word_score(word)
             words_scores.append((word, word_score))
 
@@ -50,7 +49,7 @@ class Referee:
 
     def dictionary_top_n(self, n):
         words_scores = self.dictionary_scores()
-        words_scores.sort(key=lambda x: x[1])
+        words_scores.sort(key=lambda x: x[1]) # sort by score that letter has
 
         return words_scores[-n]
 
@@ -89,4 +88,4 @@ if __name__ == '__main__':
             print("{} has score equal to given ( {} )".format(user_word, user_score))
 
     else:
-        raise NotImplementedError("There is no such mode")
+        raise NotImplementedError("There is no such mode, check docstr")
