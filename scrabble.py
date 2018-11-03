@@ -1,13 +1,22 @@
-"""This module help to calculate scores in Scrabble Game"""
+"""This module help to calculate scores in Scrabble Game.
+
+There are three options to use it as script:
+- calculate score of specific word --word or -w <word>
+- from dictionary find word that has specific score --score or -s <score>
+- from dictionary find word with highest score --top -t
+"""
 import sys
 import random
 
 
 class ScrabbleRules:
+    """Holds data about score rules, and dictionary with words."""
+
     def __init__(self, scrabbles_scores, dict_file):
         self.dictionary = open(dict_file, "r")
-        self.letter_scores = {letter: score for score, letters in scrabbles_scores
-                              for letter in letters.split()}
+        self.dictionary = [word[:-1] for word in self.dictionary]                    # remove \n character from words
+        self.letter_scores = {letter: score for score, letters in scrabbles_scores   # create dict with mapping
+                              for letter in letters.split()}                         # letter: score
 
     def score_for_letter(self, letter):
         return self.letter_scores[letter]
@@ -33,7 +42,6 @@ class Referee:
         words_scores = []
 
         for word in dictionary:
-            word = word.upper()
             word = word[:-1]
             word_score = self.word_score(word)
             words_scores.append((word, word_score))
