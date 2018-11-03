@@ -23,6 +23,7 @@ ENG
 
 Write a script that will tell score from scrabble game based on LETTER_SCORES.
 There should be three options (available from command line):
+-return highest score from dictionary.txt file
 -return score of given word
 -return word with given score:
    a) if there is more than one word, choose randomly
