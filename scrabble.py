@@ -13,8 +13,9 @@ class ScrabbleRules:
     """Holds data about score rules, and dictionary with words."""
 
     def __init__(self, scrabbles_scores, dict_file):
-        self.dictionary = open(dict_file, "r")
-        self.dictionary = [word[:-1] for word in self.dictionary]   # remove \n character from words
+        f = open(dict_file, "r")
+        text = f.read()
+        self.dictionary = text.split(' | ')
         self.letter_scores = {letter: score for score, letters in scrabbles_scores   # create dict with mapping
                               for letter in letters.split()}                         # letter: score
 
