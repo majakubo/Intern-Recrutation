@@ -15,8 +15,8 @@ class ScrabbleRules:
     def __init__(self, scrabbles_scores, dict_file):
         f = open(dict_file, "r")
         text = f.read()
-        text = text[:-1]     # remove newline character at the end of file
         self.dictionary = text.split('\n')
+        self.dictionary.pop() # remove last empty element due to \n at the end of file
         self.letter_scores = {letter: score for score, letters in scrabbles_scores   # create dict with mapping
                               for letter in letters.split()}                         # letter: score
 
